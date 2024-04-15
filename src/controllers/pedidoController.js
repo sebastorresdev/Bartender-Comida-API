@@ -18,8 +18,7 @@ function obtenerTodosLosPedidosController(req, res) {
             console.error('Error al ejecutar el procedimiento:', err);
             return res.status(500).json({ error: 'Error al ejecutar el procedimiento' });
         }
-        console.log(resultados);
-        res.status(200).json(resultados);
+        res.status(200).json(resultados[0]);
     })
 };
 
